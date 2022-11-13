@@ -22,64 +22,6 @@
     </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mobiliumIbrahimErdogan" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" indicatorStyle="black" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="998-B1-Rjz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="ss9-F5-tVE"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yn2-AZ-OkU">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7pJ-OZ-2QM" customClass="SliderCollectionCellView" customModule="mobiliumIbrahimErdogan" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="0.0" width="411" height="228"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hac-23-iQV">
-                                            <rect key="frame" x="0.0" y="0.0" width="411" height="228"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJQ-FY-DYP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="411" height="228"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="uJQ-FY-DYP" firstAttribute="top" secondItem="Hac-23-iQV" secondAttribute="top" id="K6A-mq-9wA"/>
-                                                <constraint firstAttribute="bottom" secondItem="uJQ-FY-DYP" secondAttribute="bottom" id="Lg4-4I-Tza"/>
-                                                <constraint firstItem="uJQ-FY-DYP" firstAttribute="leading" secondItem="Hac-23-iQV" secondAttribute="leading" id="a97-4o-TFb"/>
-                                                <constraint firstAttribute="trailing" secondItem="uJQ-FY-DYP" secondAttribute="trailing" id="uHP-GF-6cb"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="411" height="228"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="998-B1-Rjz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YuW-vi-hXr"/>
-                            <constraint firstItem="998-B1-Rjz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dBh-KN-Gv8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="998-B1-Rjz" secondAttribute="trailing" id="dlR-DW-Tts"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="8aG-ju-UDx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="83.705357142857139"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="ocq-jt-yMX">
             <objects>
                 <viewController id="ci5-Tq-aDq" customClass="ViewController" customModule="mobiliumIbrahimErdogan" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,10 +213,14 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMDB Logo" translatesAutoresizingMaskIntoConstraints="NO" id="M3R-DY-itu">
                                 <rect key="frame" x="16" y="315" width="49" height="24"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="4SE-4t-cPA"/>
                                     <constraint firstAttribute="height" constant="24" id="yUG-gO-E4H"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="S1H-kb-bTT" appends="YES" id="kmu-Kg-fNe"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rate Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MCn-xa-HsB">
                                 <rect key="frame" x="69" y="319" width="16" height="16"/>
@@ -364,25 +310,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jls-KW-yQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="S1H-kb-bTT">
+                    <connections>
+                        <action selector="ImdbButtonClicked:" destination="lTN-70-UV2" id="hep-E3-Bwb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5686.9565217391309" y="363.61607142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QSa-aC-MGB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="KXF-Bo-ekH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zpi-xo-dSm">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tHV-BL-oI4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fui-NY-6Zo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gft-Yq-Fk4">
