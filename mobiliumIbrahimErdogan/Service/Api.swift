@@ -17,7 +17,7 @@ class ServiceAPI
     
     func createUrl(endpoind : String,page : Int) -> URL?
     {
-        let apiKey = "1f28ee049ce766acadb7f46eb0a9e2f0"
+        let apiKey = ApiKey
         var componenets = URLComponents()
         componenets.scheme = "https"
         componenets.host = "api.themoviedb.org"

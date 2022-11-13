@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
             {
                 if let movie = movieDetailViewModel.movie
                  {
-                    let url = URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/\(movie.posterPath ?? " ")")!
+                    let url = URL(string: "\(ImageUrlBase + (movie.posterPath ?? " "))")!
                         if let data = try? Data(contentsOf: url) {
                             self?.movieImage.image = UIImage(data: data)
                             self?.movieRate.text = rateFormat(value: movie.voteAverage!)

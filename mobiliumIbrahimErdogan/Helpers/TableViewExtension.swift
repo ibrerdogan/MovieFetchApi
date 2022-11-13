@@ -17,10 +17,12 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = listTableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath) as! ListTableViewCell
         
-        let url = URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/\(tableViewModel.tableMovies[indexPath.row].posterPath ?? "")")!
+        let url = URL(string: "\(ImageUrlBase + (tableViewModel.tableMovies[indexPath.row].posterPath ?? ""))")!
+      
 
             if let data = try? Data(contentsOf: url) {
                 cell.listTableViewMovieImage.image = UIImage(data: data)
+                cell.listTableViewMovieImage.layer.cornerRadius = 10
             }
         cell.listTableViewMovieName.text = setTitle(name: tableViewModel.tableMovies[indexPath.row].originalTitle ?? "",
                                                                    relase: tableViewModel.tableMovies[indexPath.row].releaseDate ?? "10-10-2020")

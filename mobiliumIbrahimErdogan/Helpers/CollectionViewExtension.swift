@@ -47,7 +47,7 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderCollectionCell", for: indexPath) as! SliderCollectionCellView
-        let url = URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/\(sliderViewModel.sliderMovies![indexPath.row].posterPath ?? "")")!
+        let url = URL(string: "\(ImageUrlBase + (sliderViewModel.sliderMovies![indexPath.row].posterPath ?? ""))")!
             if let data = try? Data(contentsOf: url) {
                 cell.sliderCollectionViewMovieImage.image = UIImage(data: data)
             }
