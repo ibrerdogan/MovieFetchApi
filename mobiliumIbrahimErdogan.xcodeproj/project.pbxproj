@@ -7,12 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D9F45146367FE1F9152A999 /* Pods_mobiliumIbrahimErdogan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841DBCAD4C98105AE4C8BBF3 /* Pods_mobiliumIbrahimErdogan.framework */; };
 		7F17D2EC2920038B009CE4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17D2EB2920038B009CE4AA /* AppDelegate.swift */; };
 		7F17D2EE2920038B009CE4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17D2ED2920038B009CE4AA /* SceneDelegate.swift */; };
 		7F17D2F02920038B009CE4AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17D2EF2920038B009CE4AA /* ViewController.swift */; };
 		7F17D2F32920038B009CE4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F17D2F12920038B009CE4AA /* Main.storyboard */; };
 		7F17D2F52920038D009CE4AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F17D2F42920038D009CE4AA /* Assets.xcassets */; };
 		7F17D2F82920038D009CE4AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F17D2F62920038D009CE4AA /* LaunchScreen.storyboard */; };
+		7F17D30829200EC7009CE4AA /* SliderCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17D30729200EC7009CE4AA /* SliderCollectionCellView.swift */; };
+		7F4629822921509F00B9F180 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629812921509F00B9F180 /* CollectionViewExtension.swift */; };
+		7F4629842921510700B9F180 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629832921510700B9F180 /* TableViewExtension.swift */; };
+		7F4629862921533200B9F180 /* Statics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4629852921533200B9F180 /* Statics.swift */; };
+		7FCCA250292045A10065B788 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA24F292045A10065B788 /* ListTableViewCell.swift */; };
+		7FCCA25229204D420065B788 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA25129204D420065B788 /* DetailViewController.swift */; };
+		7FCCA25529205D1C0065B788 /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA25429205D1C0065B788 /* SliderViewModel.swift */; };
+		7FCCA25829205D690065B788 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA25729205D680065B788 /* Api.swift */; };
+		7FCCA25A2920E0300065B788 /* NowPlayingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA2592920E0300065B788 /* NowPlayingMovieModel.swift */; };
+		7FCCA25C2920E07F0065B788 /* UpComingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA25B2920E07F0065B788 /* UpComingMovieModel.swift */; };
+		7FCCA25E2920E0D60065B788 /* MovieBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA25D2920E0D60065B788 /* MovieBaseModel.swift */; };
+		7FCCA2642920FAD90065B788 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCCA2632920FAD90065B788 /* TableViewModel.swift */; };
+		7FF5676229210E3B0041C355 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5676129210E3B0041C355 /* MovieDetailViewModel.swift */; };
+		7FF5676529213C790041C355 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5676429213C790041C355 /* ApiError.swift */; };
+		7FF567672921419E0041C355 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF567662921419E0041C355 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,29 @@
 		7F17D2F42920038D009CE4AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F17D2F72920038D009CE4AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F17D2F92920038D009CE4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F17D30729200EC7009CE4AA /* SliderCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionCellView.swift; sourceTree = "<group>"; };
+		7F46298029214F6700B9F180 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7F4629812921509F00B9F180 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
+		7F4629832921510700B9F180 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		7F4629852921533200B9F180 /* Statics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statics.swift; sourceTree = "<group>"; };
+		7FCCA24B29203A190065B788 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		7FCCA24C29203A190065B788 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		7FCCA24D29203A190065B788 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		7FCCA24E29203A190065B788 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		7FCCA24F292045A10065B788 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		7FCCA25129204D420065B788 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7FCCA25429205D1C0065B788 /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
+		7FCCA25729205D680065B788 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		7FCCA2592920E0300065B788 /* NowPlayingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMovieModel.swift; sourceTree = "<group>"; };
+		7FCCA25B2920E07F0065B788 /* UpComingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieModel.swift; sourceTree = "<group>"; };
+		7FCCA25D2920E0D60065B788 /* MovieBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBaseModel.swift; sourceTree = "<group>"; };
+		7FCCA2632920FAD90065B788 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		7FF5676129210E3B0041C355 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		7FF5676429213C790041C355 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		7FF567662921419E0041C355 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		841DBCAD4C98105AE4C8BBF3 /* Pods_mobiliumIbrahimErdogan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobiliumIbrahimErdogan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		957F4708F55D51DED6D56A14 /* Pods-mobiliumIbrahimErdogan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobiliumIbrahimErdogan.debug.xcconfig"; path = "Target Support Files/Pods-mobiliumIbrahimErdogan/Pods-mobiliumIbrahimErdogan.debug.xcconfig"; sourceTree = "<group>"; };
+		AA641EB23E1AAC4251FA05CD /* Pods-mobiliumIbrahimErdogan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobiliumIbrahimErdogan.release.xcconfig"; path = "Target Support Files/Pods-mobiliumIbrahimErdogan/Pods-mobiliumIbrahimErdogan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D9F45146367FE1F9152A999 /* Pods_mobiliumIbrahimErdogan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC9A0ACBCFC71166E6BAF20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				841DBCAD4C98105AE4C8BBF3 /* Pods_mobiliumIbrahimErdogan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72378D4C529BB306C4F1E16E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				957F4708F55D51DED6D56A14 /* Pods-mobiliumIbrahimErdogan.debug.xcconfig */,
+				AA641EB23E1AAC4251FA05CD /* Pods-mobiliumIbrahimErdogan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7F17D2DF2920038B009CE4AA = {
 			isa = PBXGroup;
 			children = (
 				7F17D2EA2920038B009CE4AA /* mobiliumIbrahimErdogan */,
 				7F17D2E92920038B009CE4AA /* Products */,
+				72378D4C529BB306C4F1E16E /* Pods */,
+				5AC9A0ACBCFC71166E6BAF20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +115,83 @@
 		7F17D2EA2920038B009CE4AA /* mobiliumIbrahimErdogan */ = {
 			isa = PBXGroup;
 			children = (
+				7FF5676329213C6D0041C355 /* Helpers */,
+				7FCCA2602920E60F0065B788 /* Fonts */,
+				7FCCA25F2920E6030065B788 /* Views */,
+				7FCCA25629205D5B0065B788 /* Service */,
+				7FCCA25329205D0D0065B788 /* ViewModels */,
+				7FCCA2482920234E0065B788 /* Model */,
 				7F17D2EB2920038B009CE4AA /* AppDelegate.swift */,
 				7F17D2ED2920038B009CE4AA /* SceneDelegate.swift */,
-				7F17D2EF2920038B009CE4AA /* ViewController.swift */,
 				7F17D2F12920038B009CE4AA /* Main.storyboard */,
 				7F17D2F42920038D009CE4AA /* Assets.xcassets */,
 				7F17D2F62920038D009CE4AA /* LaunchScreen.storyboard */,
 				7F17D2F92920038D009CE4AA /* Info.plist */,
+				7F46298029214F6700B9F180 /* README.md */,
 			);
 			path = mobiliumIbrahimErdogan;
+			sourceTree = "<group>";
+		};
+		7FCCA2482920234E0065B788 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCA2592920E0300065B788 /* NowPlayingMovieModel.swift */,
+				7FCCA25B2920E07F0065B788 /* UpComingMovieModel.swift */,
+				7FCCA25D2920E0D60065B788 /* MovieBaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FCCA25329205D0D0065B788 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCA25429205D1C0065B788 /* SliderViewModel.swift */,
+				7FCCA2632920FAD90065B788 /* TableViewModel.swift */,
+				7FF5676129210E3B0041C355 /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7FCCA25629205D5B0065B788 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCA25729205D680065B788 /* Api.swift */,
+				7FF5676429213C790041C355 /* ApiError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7FCCA25F2920E6030065B788 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCA24F292045A10065B788 /* ListTableViewCell.swift */,
+				7F17D30729200EC7009CE4AA /* SliderCollectionCellView.swift */,
+				7F17D2EF2920038B009CE4AA /* ViewController.swift */,
+				7FCCA25129204D420065B788 /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7FCCA2602920E60F0065B788 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7FCCA24C29203A190065B788 /* SF-Pro-Display-Bold.otf */,
+				7FCCA24D29203A190065B788 /* SF-Pro-Text-Bold.otf */,
+				7FCCA24E29203A190065B788 /* SF-Pro-Text-Medium.otf */,
+				7FCCA24B29203A190065B788 /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7FF5676329213C6D0041C355 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7FF567662921419E0041C355 /* Helpers.swift */,
+				7F4629812921509F00B9F180 /* CollectionViewExtension.swift */,
+				7F4629832921510700B9F180 /* TableViewExtension.swift */,
+				7F4629852921533200B9F180 /* Statics.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F17D2FC2920038D009CE4AA /* Build configuration list for PBXNativeTarget "mobiliumIbrahimErdogan" */;
 			buildPhases = (
+				75DA3ACD823BFD2E6CBC6CB4 /* [CP] Check Pods Manifest.lock */,
 				7F17D2E42920038B009CE4AA /* Sources */,
 				7F17D2E52920038B009CE4AA /* Frameworks */,
 				7F17D2E62920038B009CE4AA /* Resources */,
+				4310D4ED8CC1ADC603AF7B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +262,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4310D4ED8CC1ADC603AF7B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobiliumIbrahimErdogan/Pods-mobiliumIbrahimErdogan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mobiliumIbrahimErdogan/Pods-mobiliumIbrahimErdogan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobiliumIbrahimErdogan/Pods-mobiliumIbrahimErdogan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75DA3ACD823BFD2E6CBC6CB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mobiliumIbrahimErdogan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F17D2E42920038B009CE4AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCCA25829205D690065B788 /* Api.swift in Sources */,
+				7FCCA2642920FAD90065B788 /* TableViewModel.swift in Sources */,
 				7F17D2F02920038B009CE4AA /* ViewController.swift in Sources */,
+				7FCCA25C2920E07F0065B788 /* UpComingMovieModel.swift in Sources */,
+				7FCCA25A2920E0300065B788 /* NowPlayingMovieModel.swift in Sources */,
 				7F17D2EC2920038B009CE4AA /* AppDelegate.swift in Sources */,
+				7F17D30829200EC7009CE4AA /* SliderCollectionCellView.swift in Sources */,
+				7F4629862921533200B9F180 /* Statics.swift in Sources */,
 				7F17D2EE2920038B009CE4AA /* SceneDelegate.swift in Sources */,
+				7FCCA25E2920E0D60065B788 /* MovieBaseModel.swift in Sources */,
+				7FF567672921419E0041C355 /* Helpers.swift in Sources */,
+				7FF5676229210E3B0041C355 /* MovieDetailViewModel.swift in Sources */,
+				7F4629822921509F00B9F180 /* CollectionViewExtension.swift in Sources */,
+				7FCCA250292045A10065B788 /* ListTableViewCell.swift in Sources */,
+				7F4629842921510700B9F180 /* TableViewExtension.swift in Sources */,
+				7FF5676529213C790041C355 /* ApiError.swift in Sources */,
+				7FCCA25229204D420065B788 /* DetailViewController.swift in Sources */,
+				7FCCA25529205D1C0065B788 /* SliderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +468,7 @@
 		};
 		7F17D2FD2920038D009CE4AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 957F4708F55D51DED6D56A14 /* Pods-mobiliumIbrahimErdogan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +497,7 @@
 		};
 		7F17D2FE2920038D009CE4AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA641EB23E1AAC4251FA05CD /* Pods-mobiliumIbrahimErdogan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
