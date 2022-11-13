@@ -10,9 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     var movieId : Int?
-   
-    
-   
+
    
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieRelaseDate: UILabel!
