@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import Combine
 class ServiceAPI
 {
     //farklı sorgular için farklı endpointler gerekebilir diyerek url creationu farklı bir fonksiyon içerisinde yazdım.
@@ -14,6 +15,7 @@ class ServiceAPI
     //api key info.plisy içerisine saklanabilir.
     //servide error enumu ile belli hataları kontrol ediğ ekrana veriyorum
     
+    private var cancellable = Set<AnyCancellable>()
     
     func createUrl(endpoind : String,page : Int) -> URL?
     {
@@ -37,28 +39,23 @@ class ServiceAPI
     //3 ayrı sorgu sistemi için tek bir fonksiyon yazdım asıl api bağlantısını buradan saplıyorum
      private func fetch<T : Codable>(type : T.Type ,url : URL? , completion : @escaping (Result<T,APIError>)->Void)
     {
+        
         if let url = url {
-            AF.request(url).responseDecodable(of: T.self) { response in
-                
-               if let error = response.error
-                {
-                   debugPrint(error.localizedDescription)
-                   completion(.failure(.badResponse(error.responseCode!)))
-                }
-                else
-                {
-                    if let movie = response.value
-                    {
-                        completion(.success(movie))
+            URLSession.shared.dataTaskPublisher(for: url)
+                .map({$0.data})
+                .decode(type: T.self, decoder: JSONDecoder())
+                .sink { receivedResult in
+                    switch receivedResult{
+                    case .failure(_):
+                        completion(.failure(.badURL))
+                    case .finished:
+                        print("finirs api call")
                     }
+                } receiveValue: { result in
+                    completion(.success(result))
                 }
-                
-            }
+                .store(in: &cancellable)
 
-        }
-        else
-        {
-            completion(.failure(.badURL))
         }
     }
     

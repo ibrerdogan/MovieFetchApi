@@ -41,6 +41,12 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <scrollView key="backgroundView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Q1U-go-ZnK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <viewLayoutGuide key="contentLayoutGuide" id="1K6-OY-38L"/>
+                                    <viewLayoutGuide key="frameLayoutGuide" id="JUq-qF-eh0"/>
+                                </scrollView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sliderCollectionCell" id="fPy-TO-xFn" customClass="SliderCollectionCellView" customModule="mobiliumIbrahimErdogan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
@@ -91,7 +97,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bVF-WE-Wyl">
-                                <rect key="frame" x="0.0" y="256" width="414" height="606"/>
+                                <rect key="frame" x="0.0" y="264" width="414" height="632"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" rowHeight="136" id="3g0-yj-c7a" customClass="ListTableViewCell" customModule="mobiliumIbrahimErdogan" customModuleProvider="target">
@@ -105,7 +111,7 @@
                                                     <rect key="frame" x="16" y="16" width="104" height="104"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xm-ar-5Gj">
-                                                    <rect key="frame" x="128" y="35" width="222" height="18"/>
+                                                    <rect key="frame" x="312.5" y="35" width="37.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -113,7 +119,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkD-L4-7ky">
                                                     <rect key="frame" x="128" y="61" width="222" height="16"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="222" id="g1g-j8-TUa"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="g1g-j8-TUa"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="13"/>
                                                     <color key="textColor" name="tableViewDetailAndDateColor"/>
@@ -136,14 +142,15 @@
                                                 <constraint firstAttribute="trailing" secondItem="n30-7N-coA" secondAttribute="trailing" constant="294" id="6G4-re-ko3"/>
                                                 <constraint firstAttribute="bottom" secondItem="n30-7N-coA" secondAttribute="bottom" constant="16" id="6wD-rb-qXK"/>
                                                 <constraint firstItem="n30-7N-coA" firstAttribute="top" secondItem="OXR-8g-ua4" secondAttribute="top" constant="16" id="94z-A4-YAD"/>
-                                                <constraint firstItem="8Xm-ar-5Gj" firstAttribute="leading" secondItem="n30-7N-coA" secondAttribute="trailing" constant="8" id="BcS-YR-fPc"/>
+                                                <constraint firstItem="8Xm-ar-5Gj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n30-7N-coA" secondAttribute="trailing" constant="8" symbolic="YES" id="BcS-YR-fPc"/>
+                                                <constraint firstItem="BiI-8Z-FhJ" firstAttribute="leading" secondItem="FkD-L4-7ky" secondAttribute="trailing" constant="33" id="EEi-ck-BGO"/>
                                                 <constraint firstAttribute="bottom" secondItem="BiI-8Z-FhJ" secondAttribute="bottom" constant="62" id="EL3-Oq-HYl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="r0j-B5-WIb" secondAttribute="trailing" constant="44" id="IbC-f7-ggH"/>
                                                 <constraint firstItem="BiI-8Z-FhJ" firstAttribute="top" secondItem="OXR-8g-ua4" secondAttribute="top" constant="62" id="T66-Fr-qxV"/>
                                                 <constraint firstItem="FkD-L4-7ky" firstAttribute="top" secondItem="8Xm-ar-5Gj" secondAttribute="bottom" constant="8" id="a0E-q7-dKL"/>
                                                 <constraint firstItem="FkD-L4-7ky" firstAttribute="leading" secondItem="n30-7N-coA" secondAttribute="trailing" constant="8" id="avb-Z6-XHl"/>
                                                 <constraint firstItem="8Xm-ar-5Gj" firstAttribute="top" secondItem="OXR-8g-ua4" secondAttribute="topMargin" constant="24" id="cNE-yE-AJ1"/>
-                                                <constraint firstItem="FkD-L4-7ky" firstAttribute="leading" secondItem="n30-7N-coA" secondAttribute="trailing" constant="8" id="fpL-bT-TNc"/>
+                                                <constraint firstItem="FkD-L4-7ky" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n30-7N-coA" secondAttribute="trailing" symbolic="YES" id="fpL-bT-TNc"/>
                                                 <constraint firstItem="r0j-B5-WIb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n30-7N-coA" secondAttribute="trailing" constant="8" symbolic="YES" id="mfZ-jq-Cxd"/>
                                                 <constraint firstItem="r0j-B5-WIb" firstAttribute="top" secondItem="FkD-L4-7ky" secondAttribute="bottom" constant="16" id="xmt-AI-9uQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="BiI-8Z-FhJ" secondAttribute="trailing" constant="19" id="xng-SD-n3Z"/>
@@ -177,9 +184,9 @@
                             <constraint firstItem="4VZ-m8-0nP" firstAttribute="top" secondItem="8DU-Ad-Tz7" secondAttribute="top" constant="120" id="QZR-Fg-fXd"/>
                             <constraint firstAttribute="trailing" secondItem="tlH-Yx-dkP" secondAttribute="trailing" id="Vfg-cj-eiX"/>
                             <constraint firstItem="tlH-Yx-dkP" firstAttribute="leading" secondItem="8DU-Ad-Tz7" secondAttribute="leading" id="ZHS-iO-rA1"/>
-                            <constraint firstItem="bVF-WE-Wyl" firstAttribute="top" secondItem="tlH-Yx-dkP" secondAttribute="bottom" id="d4O-SY-fnC"/>
+                            <constraint firstItem="bVF-WE-Wyl" firstAttribute="top" secondItem="tlH-Yx-dkP" secondAttribute="bottom" constant="8" id="d4O-SY-fnC"/>
                             <constraint firstItem="8DU-Ad-Tz7" firstAttribute="trailing" secondItem="tlH-Yx-dkP" secondAttribute="trailing" id="fTC-lo-q0l"/>
-                            <constraint firstItem="8DU-Ad-Tz7" firstAttribute="bottom" secondItem="bVF-WE-Wyl" secondAttribute="bottom" id="gug-gi-mLR"/>
+                            <constraint firstItem="8DU-Ad-Tz7" firstAttribute="bottom" secondItem="bVF-WE-Wyl" secondAttribute="bottom" constant="-34" id="gug-gi-mLR"/>
                             <constraint firstItem="8DU-Ad-Tz7" firstAttribute="trailing" secondItem="4VZ-m8-0nP" secondAttribute="trailing" constant="149" id="hwx-M3-Xef"/>
                             <constraint firstItem="8DU-Ad-Tz7" firstAttribute="trailing" secondItem="bVF-WE-Wyl" secondAttribute="trailing" id="oQj-OF-cXv"/>
                             <constraint firstItem="tlH-Yx-dkP" firstAttribute="leading" secondItem="8DU-Ad-Tz7" secondAttribute="leading" id="vHo-J1-39v"/>
@@ -195,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8W-Xz-j17" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4589.8550724637689" y="363.61607142857139"/>
+            <point key="canvasLocation" x="4753.6231884057979" y="363.61607142857139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="6m3-HH-Ihi">
@@ -255,14 +262,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cQ-jV-KDV">
-                                <rect key="frame" x="16" y="356" width="382" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cQ-jV-KDV">
+                                <rect key="frame" x="16" y="356" width="382" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-sh-a6D">
-                                <rect key="frame" x="16" y="392" width="382" height="458"/>
+                                <rect key="frame" x="16" y="368" width="382" height="482"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -316,7 +323,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5686.9565217391309" y="363.61607142857139"/>
+            <point key="canvasLocation" x="5525" y="364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gft-Yq-Fk4">

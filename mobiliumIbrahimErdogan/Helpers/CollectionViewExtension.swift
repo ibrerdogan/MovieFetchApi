@@ -33,27 +33,21 @@ extension ViewController : UICollectionViewDelegateFlowLayout
 extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let count =  sliderViewModel.sliderMovies?.count
-        {
-        
-            return count
-        }
-        else
-        {
-            return 0
-        }
+        return sliderMovies.count
        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderCollectionCell", for: indexPath) as! SliderCollectionCellView
-        let url = URL(string: "\(ImageUrlBase + (sliderViewModel.sliderMovies![indexPath.row].posterPath ?? ""))")!
-            if let data = try? Data(contentsOf: url) {
-                cell.sliderCollectionViewMovieImage.image = UIImage(data: data)
-            }
+        DispatchQueue.main.async { [weak self]  in
+            let url = URL(string: "\(ImageUrlBase + (self?.sliderMovies[indexPath.row].posterPath ?? ""))")!
+                if let data = try? Data(contentsOf: url) {
+                    cell.sliderCollectionViewMovieImage.image = UIImage(data: data)
+                }
+        }
         cell.sliderCollectionViewMovieImage.contentMode = .scaleToFill
-        cell.sliderCollectionViewMovieName.text = sliderViewModel.sliderMovies![indexPath.row].title
-        cell.sliderCollectionViewMovieDetail.text = sliderViewModel.sliderMovies![indexPath.row].overview
+        cell.sliderCollectionViewMovieName.text = sliderMovies[indexPath.row].title
+        cell.sliderCollectionViewMovieDetail.text = sliderMovies[indexPath.row].overview
         sliderPager.currentPage = indexPath.row
         return cell
     }
@@ -61,7 +55,9 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedRow = indexPath.row
            if let viewController = storyboard?.instantiateViewController(identifier: "DetailView") as? DetailViewController {
-               viewController.movieId = sliderViewModel.sliderMovies![selectedRow].id
+               viewController.movieId = sliderMovies[selectedRow].id
+               viewController.movieDetailViewModel = MovieDetailViewModel(Id: sliderMovies[selectedRow].id! )
+               
                navigationController?.pushViewController(viewController, animated: true)
            }
     }

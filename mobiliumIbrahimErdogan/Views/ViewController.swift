@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Combine
 class ViewController: UIViewController {
 
     @IBOutlet weak var sliderCollectionView: UICollectionView!
@@ -18,6 +18,13 @@ class ViewController: UIViewController {
     var api = ServiceAPI()
     var sliderViewModel : SliderViewModel
     var tableViewModel : TableViewModel
+    
+    //
+    var sliderMovies : [MovieBaseModel] = []
+    var sliderSubscriber : AnyCancellable?
+    var tableMovies : [MovieBaseModel] = []
+    var tableSubscriber : AnyCancellable?
+    //
 
     required init?(coder aDecoder: NSCoder) {
         sliderViewModel = SliderViewModel(with: api)
@@ -33,9 +40,12 @@ class ViewController: UIViewController {
         sliderPager.numberOfPages = 20
         configureCollectionView()
         configureTableView()
-        getNowPlayingMovies()
-        getUpcomingMovies()
-       
+       // getNowPlayingMovies()
+      //  getUpcomingMovies()
+        getNowPlayingMoviesFromPublisher()
+        observePlayingMoviesFromPublisher()
+        getUpcomingMoviesFromPubliser()
+        observeUpcomingMoviesFromPublisher()
         
 
       
@@ -60,8 +70,15 @@ class ViewController: UIViewController {
     }
     @objc private func refreshTableView(_ sender: Any) {
       
-        getUpcomingMovies()
+       // getUpcomingMovies()
+        getUpcomingMoviesFromPubliser()
+        observeUpcomingMoviesFromPublisher()
+        self
+            .refreshControl.endRefreshing()
     }
+    
+    
+    
     
     func getUpcomingMovies()
     {
@@ -81,6 +98,30 @@ class ViewController: UIViewController {
         }
     }
     
+    func getUpcomingMoviesFromPubliser()
+    {
+        tableViewModel.getUpcomingMoviesFromPublisher()
+    }
+    
+    func  observeUpcomingMoviesFromPublisher()
+    {
+        tableSubscriber = tableViewModel.upCommingMoviesSubject
+            .receive(on: DispatchQueue.main)
+            .dropFirst()
+            .sink { receivedResult in
+                switch receivedResult {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .finished:
+                    print("finished")
+                }
+            } receiveValue: {  [weak self] upComingModel in
+                self?.tableMovies = upComingModel.results
+                self?.listTableView.reloadData()
+            }
+
+    }
+    
     func getNowPlayingMovies()
     {
         sliderViewModel.getPlayingMovies { [weak self] errorString in
@@ -95,6 +136,29 @@ class ViewController: UIViewController {
                 self?.sliderCollectionView.reloadData()
             }
         }
+    }
+    
+    func getNowPlayingMoviesFromPublisher()
+    {
+        sliderViewModel.getPlayingMoviesFromPublisher()
+    }
+    func observePlayingMoviesFromPublisher()
+    {
+       sliderSubscriber = sliderViewModel.nowPlayingMoviesSubject
+            .receive(on: DispatchQueue.main)
+            .dropFirst()
+            .sink { receivedResult in
+                switch receivedResult {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .finished:
+                    print("")
+                }
+            } receiveValue: { [weak self] nowPlayingModel in
+                self?.sliderMovies = nowPlayingModel.results
+                self?.sliderCollectionView.reloadData()
+            }
+
     }
 
 }
